@@ -19,7 +19,9 @@ function ToastProvider({ children }) {
         ]);
       };
 
-      return { toasts, addToast };
+      const dismissAll = () => setToasts([]);
+
+      return { toasts, addToast, dismissAll };
     },
     [toasts]
   );
